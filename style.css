@@ -68,19 +68,19 @@ body{
     margin-left:10%;
     margin-right:10%;
     padding-bottom: 5%;
-    border-bottom: 1px lightgray solid;
+    border-bottom: 2px lightgray solid;
     width: 80%;
 
 }
 
 #AboutMe {
-    margin-left:15%;
-    margin-right:15%;
-    width: 70%;
+    margin-left:20%;
+    margin-right:20%;
+    width: 60%;
 }
 
 #AboutMe p{
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left:10%;
@@ -100,6 +100,10 @@ body{
 
 #MySkills {
     padding-top:50px;
+}
+
+#MySkills li{
+    text-align: left;
 }
 
 .rows{
@@ -137,19 +141,39 @@ body{
     padding: 14px 14px;
     text-decoration: none;
     font-size: 20px;
+    border: 1px rgb(79, 40, 218) solid;
     border-radius: 5px;
 }
 
 #boxGameDiv a:hover{
-    color: #212529;
+    color: black;
     background-color: rgb(79, 40, 218);
+}
+
+#site{
+    color: white;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px rgb(79, 40, 218) solid;
+    border-radius: 5px;
+}
+
+#site :hover{
+    color: black;
+    background-color: rgb(79, 40, 218);
+}
+
+#showcase{
+    padding-top: 50px;
 }
 
 #ContactMe {
     padding-top:50px;
 }
 
-#email{
+.con{
     margin-top: 30px;
     color: white;
     border-radius: 5px;
@@ -165,8 +189,13 @@ body{
     background-color: rgb(79, 40, 218);
 }
 
-#mail {
+#contact img {
     width: 50px;
     height: 50px;
     margin-right:10px;
+}
+
+#linkin {
+    padding: 5px;
+    margin-bottom: 4px;
 }
