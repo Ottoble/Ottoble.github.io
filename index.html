@@ -30,7 +30,7 @@
         </header>
         <div id="main">
             <h1>Welcome to my webpage</h1>
-            <div id="AboutMe">
+            <div id="AboutMe" class = "section">
                 <h1><u>About Me: </u></h1>
                 <img src = "">
                 <div id = aboutTxt>
@@ -38,32 +38,54 @@
                     <p>I am currently in my third year studying information technology.
                         I have loved technology since I was very young and always knew I wanted to work with it as I grew up. 
                     </p>
-                    <p>I have been programming since I was 15 and have learned a plethra of skills and techniqunes since I have started. 
-                        Throughout the years I have learned much about data structures, algorithems and principles, best practices, program architecture, 
-                        new languages as well as operating systems and hardware. All because I enjoy emersing myself in technology.
-                    </p>
+                    <p>All because I enjoy emersing myself in technology.</p>
                 </div>
             </div>
 
-            <div id="Resume">
+            <div id="Resume" >
                 <h1><u>Please have a look at my resume below:</u></h1>
+
+            </div>
+
+            <div class = "section">
                 <embed src="Resume(programming).pdf" id="resumepdf" />
             </div>
 
-            <div id="MySkills">
-                <h1><u>My Skills</u></h1>
-                <div id="boxGame">
-                    <a href = "ex4/ex4.html" id = "boxGame">This is a small program I made in JavaScript</a>
+            <div id="MySkills" class = "section">
+                <h1><u>My Skills:</u></h1>
+                <div class = "rows">
+                    <div class = "skillTxt"> 
+                        <p>This is a small program I made in my web design class. The program is made in javascript and css. </br>
+                            The page will generate 100 boxes and as you hover over them, the box will disappear. When there is 1 box left, an alert will popup.</br>
+                            Click generate more for another 100 boxes</p>
+                    </div>
+                    <div id="boxGameDiv" class = "skillDisplay">
+                        <div style="margin-top:20%;">
+                            <a href = "ex4/ex4.html" id = "boxGame">Try it here</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "rows">
+                    <div id="boxGameDiv" class = "skillDisplay">
+                        <img src = "https://www.monetbil.com/support/wp-content/uploads/2021/01/java-logo-vector.png" width = "200px" height = "200px">
+                    </div>
+                    <div class = "skillTxt"> 
+                        <p>I have been programming since I was 15 and have learned a plethra of skills and techniqunes since I have started. 
+                            Throughout the years I have learned much about data structures, algorithems and principles, best practices, program architecture, 
+                            new languages as well as operating systems and hardware. </p>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div id="ContactMe">
+            <div id="ContactMe" class = "section">
                 <h1><u>Feel free to reach out to me at:</u></h1>
                 <div id = "contact">
                     
                     <a href = "mailto:otto.f.yu@gmail.com" id = "email">
-                        <img id = "mail" src = "free-send-mail-icon-2574-thumb.png" >Otto.f.yu@gmail.com</a>
+                        <img id = "mail" src = "free-send-mail-icon-2574-thumb.png"> Otto.f.yu@gmail.com</a>
                 </div>
             </div>
         </div>
