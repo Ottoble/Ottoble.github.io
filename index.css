@@ -1,0 +1,443 @@
+*{
+    margin: unset;
+    padding: unset;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    background-color: white;
+    margin: auto;
+    max-width: 70vw;
+    max-height: 80vh;
+}
+body{
+    
+    width: 720px;
+    height:900px;
+    background: rgb(95, 89, 89);
+    border: 0.2rem solid gray;
+    border-radius: 1rem;
+}
+
+#list {
+    position: absolute;
+    margin: 0rem 0rem 0rem 1.5rem;
+    z-index: 1;
+    width: 60%;
+    display: none;
+
+}
+/*general style*/
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    height:20rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+    margin: 3.5rem auto 3.5rem auto;
+}
+
+#logo {
+    width: 15rem;
+    height: 15rem;
+    margin-top: 2rem;
+    margin-left: 5px;
+}
+
+.login{
+    padding: 1rem;
+}
+
+#userIdForm{
+    display: block;
+
+    margin:auto;
+    width:75%;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: lightgray;
+}
+
+#backBtn {
+    display:flex;
+    justify-content: center;
+    width: 7rem;
+    margin: 1.5rem 1rem 0rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid orange;
+}
+
+#backBtn p{
+    font-size: 1.5rem;
+    padding-left: 0.3rem;
+}
+#backBtn #backArrow{
+    width:20%;
+    height:50%;
+    margin: 0.4rem 0rem 0rem 0rem;
+}
+
+#fwdBtn {
+    display:flex;
+    justify-content: center;
+    width: 7rem;
+    margin: 1.5rem 1rem 0rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+}
+
+#fwdBtn p{
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+}
+#fwdBtn #fwdArrow{
+    transform: rotateY(180deg);
+    width:20%;
+    height:50%;
+    margin: 0.4rem 0rem 0rem 0rem;
+}
+
+#navBtn {
+    margin:auto;
+    width: 80%;
+    display: flex;
+}
+
+#navBtn button{
+    margin:0rem;
+    padding: 0.5rem;
+}
+
+#navBtn #fwdBtn{
+    margin-left: 60%;
+}
+
+/*create acc style*/
+
+
+.logo1{
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+    height:10rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+    margin: 3.5rem auto 3.5rem auto;
+}
+
+.logo1 #logo{
+    width: 8rem;
+    height: 8rem;
+    margin-top: 1rem;
+    margin-left: 5px;
+}
+
+#req {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#createUserIdForm {
+    display: block;
+    margin:auto;
+    width:75%;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: lightgray;
+}
+
+#createUserIdForm input {
+    display: block;
+    margin:1rem auto 1rem auto;
+    width: 85%;
+    text-align: left;
+    border: 1px solid orange;
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+#nameDiv{
+    margin-left:2rem;
+}
+
+#nameDiv input{
+    display: inline;
+    width: 42%;
+    text-align: left;
+    border: 1px solid orange;
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: 10px;
+    margin:1rem auto 0rem auto;
+}
+
+#createUserIdForm:valid #loginBtn{
+    background-color:orange;
+}
+
+/*user id style*/
+
+#userIdForm label {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#userIdForm input {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    text-align: left;
+    border: 1px solid orange;
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+#userIdForm:valid #loginBtn{
+    background-color:orange;
+}
+
+#forgotPassword {
+    padding: 0rem 0rem 0rem 2.5rem;
+}
+
+#cont {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*upload*/ 
+#uploadForm {
+    display: block;
+    margin:auto;
+    width:75%;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: lightgray;
+}
+
+#uploadForm input{
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    text-align: left;
+    border: 1px solid orange;
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: 10px;
+}
+#uploadForm p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+#driverImg {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+/*menu*/
+#menuIcon {
+    width: 4rem;
+    height: 4rem;
+    margin: 1.5rem 0rem 0rem 1.5rem;
+    background-color: lightgray;
+    border-radius: 1rem;
+    box-shadow: 0 8px #999;
+}
+
+#menuIcon:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#main #list {
+    position: absolute;
+    margin: 0rem 0rem 0rem 1.5rem;
+    z-index: 1;
+    width: 60%;
+    display: none;
+
+}
+#list a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+    font-size: 2rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+
+}
+
+#list a:hover {
+    background-color: orange;
+    transform: translateX(7px);
+}
+
+.rent {
+    display: block;
+}
+
+.title{
+    width: 70%;
+    background-color: orange;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 2rem auto 1rem auto;
+    border: 1px solid black;
+    border-radius: 1rem; 
+    font-weight: bold;
+}
+
+.search {
+    width:70%;
+    margin:auto;
+    padding: 1rem;
+}
+
+.search input{
+    background:url(map-marker-icon.png) no-repeat;
+    background-size: 2rem;
+    background-position: right;
+    background-color: white;
+    margin: 0rem 0rem 0rem -0.5rem;
+}
+.search #suggested{
+    width:32rem;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+.search p{
+    background-color: white;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding:0.5rem;
+}
+
+.search p:hover{
+    background-color: orange;
+}
+
+#pickUpLoc {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+#dropOffLoc {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+#marker {
+    width: 1.5rem;
+    padding: 0.5rem;
+}
+
+#map {
+    width: 100%;
+    margin: 1rem auto 1rem auto;
+    border-radius: 0.5rem;
+}
+
+#pul:valid #fwdBtn{
+    background-color:orange;
+}
+
+/*car selection*/
+
+#car {
+    display: block;
+}
+#carImgDiv {
+    display: flex;
+    justify-content: center;
+}
+#carImg {
+    margin: auto;
+}
+
+#carDisplay{
+    display:inline-flex;
+    width: 80%;
+    margin: 4.5rem;
+    
+}
+#rectangle {
+    width: 30rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: lightgray;
+    border: 1px black solid;
+    border-radius: 0.5rem;
+}
+
+.arrow{
+    font-size: 4rem;
+    color: lightgray;
+    display: flex;
+    margin: 6rem 0.5rem -4.5rem 0rem;
+}
+
+.arrow:hover {
+    color: orange;
+}
+
+/*button css*/
+* button{
+    box-shadow: 0 5px #999;
+}
+
+* button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#startForm button {
+    display: block;
+    width:88%;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border: 1px solid orange;
+    border-radius: 1rem;
+    margin: 2rem auto 2rem auto;
+    font-size: 2rem;
+}
+
+#startForm button:hover{
+    background-color: orange;
+}
+#loginBtn {
+    width:88%;
+    background-color: darkgray;
+    color: black;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 1rem auto 0rem auto;
+    font-size: 2rem;
+    display: block;
+
+}
+
