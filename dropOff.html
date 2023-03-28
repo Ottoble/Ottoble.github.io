@@ -5,27 +5,26 @@
     </head>
         <body id = "return"> 
             <div id="dropdown">
-                <img src = "menu.png" id = "menuIcon" onclick = "menu('menu')">
+                <img src = "./imgs/menu.png" id = "menuIcon" onclick = "menu('menu')">
                 <div id="list">
-                    <a href="#">Rent a car</a>
-                    <a href="#">View locations</a>
-                    <a href="#">View previous rides</a>
-                    <a href="#">Account Setting</a>
-                    <a href="#">24/7 support line</a>
+                    <a href="rent.html">Rent a car</a>
+                    <a href="location.html">View locations</a>
+                    <a href="acc.html">Account Setting</a>
+                    <a href="call.html">24/7 support line</a>
                 </div>
                 </div> 
                 <div class = "return">
                 <p class = "title">Drop-off</p>
                 <form id = "dOfL" onsubmit = 'return doloc()'>
                     <div class = search>
-                        <input class = "search" type = "text" id = "dropOfLoc" placeholder="Seach Drop-Off Location" onclick = 'showSuggested()' onfocusout = 'hideSuggested()' required>
+                        <input class = "search" type = "text" id = "dropOfLoc" placeholder="Seach Drop-Off Location" onclick = 'showSuggested()'  required>
                         <div id = 'suggested'>
-                            <p onclick = 'return fillLocation("pickUpLoc","Location 1")'>Location 1</p>
-                            <p onclick = 'return fillLocation("pickUpLoc","Location 2")'>Location 2</p>
-                            <p onclick = 'return fillLocation("pickUpLoc","Location 3")'>Location 3</p>
+                            <p onclick = 'return fillLocation("dropOfLoc","Location 1")' onblur = "hideSuggested()">Location 1</p>
+                            <p onclick = 'return fillLocation("dropOfLoc","Location 2")' onblur = "hideSuggested()">Location 2</p>
+                            <p onclick = 'return fillLocation("dropOfLoc","Location 3")' onblur = "hideSuggested()">Location 3</p>
                         </div>
                         
-                        <img src="map.jpg" alt="map" usemap="#location" id = "map">
+                        <img src="./imgs/map.jpg" alt="map" usemap="#location" id = "map">
                     </div>
                     <map name="location">
                         <area shape = "circle" coords = "210,100, 40" onclick = 'selectPoint("dropOfLoc", 1)'>
@@ -34,12 +33,12 @@
                     </map>
                     <div id = "navBtn">
                         <button type = "button" id = "backBtn"> 
-                            <img src = "back.png" alt = "back arrow" id = "backArrow">
+                            <img src = "./imgs/back.png" alt = "back arrow" id = "backArrow">
                             <p>Back</p>
                         </button>
                         <button type = "submit" id = "fwdBtn" > 
                             <p>Next</p>
-                            <img src = "back.png" alt = "back arrow" id = "fwdArrow">
+                            <img src = "./imgs/back.png" alt = "back arrow" id = "fwdArrow">
                         </button>
                         </div>
                     </div>

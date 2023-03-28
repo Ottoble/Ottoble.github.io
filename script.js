@@ -6,7 +6,11 @@ const prevPages = {
     'rentTime': 'rent.html',
     'return': "selectCar.html",
     'doTime' : 'dropOff.html',
-    'selCar' : 'pickupTime.html'
+    'selCar' : 'pickupTime.html',
+    'selCar1' : 'pickupTime.html',
+    'viewCar' : 'selectCar.html',
+    'confirm' : 'dropOffTime.html',
+    'tos' : 'confirm.html',
 }
 
 
@@ -52,16 +56,18 @@ function uploadImg(){
     return true;
 }
 
-let showingMenu = true;
+let showingMenu = false;
 function menu(element){
     if(element = 'menu'){
         let list = document.getElementById("list");
 
         if(showingMenu){
             list.style.display = 'none'
+            document.getElementById('menuIcon').style.backgroundColor = 'lightgray';
             showingMenu = false;
         }else{
             list.style.display = 'block'
+            document.getElementById('menuIcon').style.backgroundColor = 'orange';
             showingMenu = true;
         }
     }
@@ -76,10 +82,10 @@ function hideSuggested(){
 }
 
 function fillLocation(field, value){
-    console.log('here')
     let input = document.getElementById(field);
     input.value = value;
     console.log(input.id, input.value)
+    hideSuggested();
     return true
 }
 
@@ -110,6 +116,12 @@ function puTime(){
     return true
 }
 
+function carSel(){
+    event.preventDefault()
+    window.location.href = 'dropOff.html'
+    return true
+}
+
 function doloc(){
     event.preventDefault()
      if(document.getElementById('dropOfLoc').value != ""){
@@ -118,16 +130,40 @@ function doloc(){
     }
     return true
 }
+
+function doTime(){
+    event.preventDefault()
+    window.location.href = 'confirm.html'
+    return true
+}
 const car0 = {
-    img: 'car1.png',
+    img: './imgs/car1.png',
     price :'$100',
     model: 'Model 1',
     year: '2019',
     tag : ['5 Seats','4 Wheels','Automatic']
 }
 
+function confirm(){
+    event.preventDefault()
+    window.location.href = 'tos.html'
+    return true
+}
+
+function tos(){
+    event.preventDefault()
+    window.location.href = 'last.html'
+    return true
+}
+
+function main(){
+    event.preventDefault()
+    window.location.href = 'main.html'
+    return true
+}
+
 const car1 = {
-    img: 'car2.png',
+    img: './imgs/car2.png',
     price: '$300',
     model: 'Model 2',
     year: '2021',
@@ -142,7 +178,7 @@ function loadCar(car){
     }//else{
     //     document.getElementById('leftArrow').style.visibility = 'visible';
     // }
-    if(car == listOfCars.length){
+    if(car == 1){
         document.getElementById('rightArrow').style.visibility = 'hidden';
     }
     // else{
@@ -164,15 +200,78 @@ function loadCar(car){
 }
 
 function nextCar(){
-    try{
-        loadCar(car++)
-    }catch(error){
-        console.log(error, "out of bound")
+    window.location.href = 'selectCar1.html'
+}
+
+function prevCar(){
+    window.location.href = 'selectCar.html'
+}
+
+function viewCar(){
+    window.location.href = 'viewCar.html'
+}
+
+
+let selected = ['',false]
+function selectCar(selElement){
+    //console.log(selected)
+    let element = document.getElementById(selElement.id);
+    if(selected[1] == true){
+
+        selected[1] = false
+        if(selected[0] == element.id){
+            document.getElementById(element.id).style.backgroundColor = 'lightgray'
+            document.getElementById('fwdBtn').style.backgroundColor = 'lightgray'
+            document.getElementById('fwdBtn').disabled = true
+
+        }
+        else if(selected[0] != element.id){
+            document.getElementById(selected[0]).style.backgroundColor = 'lightgray'
+            document.getElementById('fwdBtn').style.backgroundColor = 'lightgray'
+            document.getElementById('fwdBtn').disabled = true
+        }
+
+    }else{
+        element.style.backgroundColor = 'orange';
+        document.getElementById('fwdBtn').style.backgroundColor = 'orange'
+        document.getElementById('fwdBtn').disabled = false
+        selected[0] = element.id
+        selected[1] = true;
+    }
+    
+}
+
+function selectCarTag(selElement, tag1, tag2, tag3){
+    //console.log(selected)
+    let element = document.getElementById(selElement.id);
+    if(selected[1] == true){
+
+        selected[1] = false
+        if(selected[0] == element.id){
+            document.getElementById(element.id).style.backgroundColor = 'lightgray'
+            document.getElementById('fwdBtn').style.backgroundColor = 'lightgray'
+            document.getElementById('fwdBtn').disabled = true
+            document.getElementById('tag1').style.backgroundColor = 'orange'
+            document.getElementById('tag2').style.backgroundColor = 'orange'
+            document.getElementById('tag3').style.backgroundColor = 'orange'
+            selected[0] = ''
+        }
+    }else{
+        element.style.backgroundColor = 'orange';
+        document.getElementById('fwdBtn').style.backgroundColor = 'orange'
+        document.getElementById('fwdBtn').disabled = false
+
+        document.getElementById('tag1').style.backgroundColor = 'white'
+        document.getElementById('tag2').style.backgroundColor = 'white'
+        document.getElementById('tag3').style.backgroundColor = 'white'
+
+        selected[0] = element.id
+        selected[1] = true;
     }
 }
+
 window.onload = function(){
     currPage = document.getElementsByTagName("body")[0].id;
-    console.log(currPage);
 
     if(currPage != 'startPage' && currPage != 'main'){
         document.getElementById("backBtn").onclick = function(){
@@ -191,9 +290,9 @@ window.onload = function(){
 
         if(currPage == 'selCar'){
             loadCar(0);
-            
+        }else if(currPage == 'selCar1'){
+            loadCar(1)
         }
-
 
     }else if(currPage == 'startPage'){
         document.getElementById("signIn").onclick = function(){
@@ -207,5 +306,7 @@ window.onload = function(){
         document.getElementById('loginBtn').onclick = function(){
             window.open('test.html', '_self');
         }
+    }else if(currPage == 'main'){
+        menu('menu');
     }
 }

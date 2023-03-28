@@ -3,7 +3,7 @@
 <link rel="stylesheet" href = "index.css">
     <head>        
     </head>
-        <body id = "selCar"> 
+        <body id = "selCar1"> 
             <div id="dropdown">
                 <img src = "./imgs/menu.png" id = "menuIcon" onclick = "menu('menu')">
                 <div id="list">
@@ -21,7 +21,7 @@
                         <button type = 'button' onclick = 'viewCar()'>View All</button>
                     </div>
                     <div id = 'carDisplay'>
-                        <div id = 'leftArrow' class = 'arrow'> &#9664;</div>
+                        <div id = 'leftArrow' class = 'arrow' onclick = 'prevCar()'> &#9664;</div>
                         <div id = 'rectangle' onclick = 'selectCarTag(rectangle, tag1, tag2, tag3)'>
                             <div id = 'carImgDiv'>
                                 <img src ='' alt = 'carimg' id = 'carImg' width="70%" height = '80%'>
@@ -37,7 +37,7 @@
                                 <p id = 'tag3'>tag 3</p>
                             </div>
                         </div>
-                        <div class = 'arrow' id = 'rightArrow' onclick = 'nextCar()'>&#9654;</div>
+                        <div class = 'arrow' id = 'rightArrow' >&#9654;</div>
                     </div>
 
                     <div id = "navBtn">

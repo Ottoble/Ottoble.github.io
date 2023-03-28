@@ -5,12 +5,12 @@
     </head>
         <body id = "loginPage"> 
             <div class = "logo">
-                <img src = "icon.png" alt = "logo" id = "logo">
+                <img src = "./imgs/icon.png" alt = "logo" id = "logo">
             </div>
 
             <div class ="login">
 
-                <form id="userIdForm">
+                <form id="userIdForm" onsubmit="return main()">
 
                     <label>
                         <input type = "email" id = "username" placeholder = "example@email.com" required>
@@ -27,7 +27,7 @@
                     </button>
 
                     <button type = "button" id = "backBtn"> 
-                        <img src = "back.png" alt = "back arrow" id = "backArrow">
+                        <img src = "./imgs/back.png" alt = "back arrow" id = "backArrow">
                         <p>Back</p>
                     </button>
                 </form>
