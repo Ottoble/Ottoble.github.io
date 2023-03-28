@@ -5,48 +5,50 @@
     </head>
         <body id = "confirm"> 
             <div id="dropdown">
-                <img src = "menu.png" id = "menuIcon" onclick = "menu('menu')">
+                <img src = "./imgs/menu.png" id = "menuIcon" onclick = "menu('menu')">
                 <div id="list">
-                    <a href="#">Rent a car</a>
-                    <a href="#">View locations</a>
-                    <a href="#">View previous rides</a>
-                    <a href="#">Account Setting</a>
-                    <a href="#">24/7 support line</a>
+                    <a href="rent.html">Rent a car</a>
+                    <a href="location.html">View locations</a>
+                    <a href="acc.html">Account Setting</a>
+                    <a href="call.html">24/7 support line</a>
                 </div>
                 </div> 
-                <div class = "confirm">
+                <div class = "">
                 <p class = "title">Confirmation</p>
-                <form id = "pul" onsubmit = 'return puloc()'>
-                    <div class = search>
-                        <input class = "search" type = "text" id = "pickUpLoc" value="Pick-Up Location: Location 1" disabled>
-                        <div class = 'confirm'>
+                <form id = "pul" onsubmit = 'return confirm()'>
+                    <div class = 'search'>
+                        <input id = 'puc' class = "search" type = "text"  value="Pick-Up Location: Location 1" disabled>
+                        <div class = 'con'>
                             <p>Pick-Up Time:</p>
-                            <p>MM-DD</p>
+                            <p>03-29</p>
                             <p>12:00</p>
-                            <p>AM</p>
+                            <p id = "am">AM</p>
                         </div>
-                        <input class = "search" type = "text" id = "dropOfLoc" value="Drop-Off Location: Location 1" disabled>
-                        <div class = 'confirm'>
-                            <p>Drop-Off Time:</p>
-                            <p>MM-DD</p>
-                            <p>12:00</p>
-                            <p>AM</p>
-                        </div>
+                            <input id = 'puc'class = "search" type = "text"  value="Drop-Off Location: Location 1" disabled>
+                            <div class = 'con'>
+                                <p>Drop-Off Time:</p>
+                                <p>03-31</p>
+                                <p>4:00</p>
+                                <p id = "am">PM</p>
+                            </div>
                         <div>
-                            <img src = 'car1.png'>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <td rowspan="5"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Model 1</td>
-                                        <td>year</td>
-                                        <td>5 seats</td>
-                                        <td>4 Wheels</td>
-                                        <td>Automatic</td>
-                                    </tr>
-                                </table>
+                            <div id = 'c'>
+                        <table id = "t">
+                            <tr>
+                                <th>
+                                    <img src = './imgs/car1.png' style = 'width: 90%;'>
+                                </th>
+                                <th>
+                                    <p>Model 1</p>
+                                    <p>2019</p>
+                                    <p>5 seats</p>
+                                    <p>4 Wheels</p>
+                                    <p>Automatic</p>
+                                </th>
+                            </tr>
+                        </table>
+                            
+                                
                             </div>
                         </div>
 
@@ -54,12 +56,12 @@
                   
                     <div id = "navBtn">
                         <button type = "button" id = "backBtn"> 
-                            <img src = "back.png" alt = "back arrow" id = "backArrow">
+                            <img src = "./imgs/back.png" alt = "back arrow" id = "backArrow">
                             <p>Back</p>
                         </button>
                         <button type = "submit" id = "fwdBtn" > 
                             <p>Next</p>
-                            <img src = "back.png" alt = "back arrow" id = "fwdArrow">
+                            <img src = "./imgs/back.png" alt = "back arrow" id = "fwdArrow">
                         </button>
                         </div>
                     </div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<title>Incognito</title>
+<link rel="stylesheet" href = "index.css">
+    <head>        
+    </head>
+        <body id = "loc"> 
+            <div id="dropdown">
+                <img src = "./imgs/menu.png" id = "menuIcon" onclick = "menu('menu')">
+                <div id="list">
+                    <a href="rent.html">Rent a car</a>
+                    <a href="location.html">View locations</a>
+                    <a href="acc.html">Account Setting</a>
+                    <a href="call.html">24/7 support line</a>
+                </div>
+                </div> 
+                <div class = "loc">
+                <p class = "title">Locations</p>
+                <form id = "pul" onsubmit = 'return puloc()' >
+                    <div class = search>
+                        <input class = "search" type = "text" id = "locBar" placeholder="Seach Pick-Up Location" onclick = 'showSuggested()' required>
+                        <div id = 'suggested'>
+                            <p onclick = 'return fillLocation("locBar","Location 1")' onblur = "hideSuggested()">Location 1</p>
+                            <p onclick = 'return fillLocation("locBar","Location 2")' onblur = "hideSuggested()">Location 2</p>
+                            <p onclick = 'return fillLocation("locBar","Location 3")' onblur = "hideSuggested()">Location 3</p>
+                        </div>
+                        
+                        <img src="./imgs/map.jpg" alt="map" usemap="#location" id = "map">
+                    </div>
+                    <map name="location">
+                        <area shape = "circle" coords = "210,100, 40" onclick = 'selectPoint("locBar", 1)'>
+                        <area shape = "circle" coords = "160,280, 40" onclick = 'selectPoint("locBar", 2)'>
+                        <area shape = "circle" coords = "370,300, 40" onclick = 'selectPoint("locBar", 3)'>
+                    </map>
+                </form>
+                
+                
+                
+            </div>
+            <script src = "script.js"></script>
+        </body>
+</html>

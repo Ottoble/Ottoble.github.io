@@ -9,7 +9,8 @@ const prevPages = {
     'selCar' : 'pickupTime.html',
     'selCar1' : 'pickupTime.html',
     'viewCar' : 'selectCar.html',
-    'confirm' : 'dropOffTime.html'
+    'confirm' : 'dropOffTime.html',
+    'tos' : 'confirm.html',
 }
 
 
@@ -55,16 +56,18 @@ function uploadImg(){
     return true;
 }
 
-let showingMenu = true;
+let showingMenu = false;
 function menu(element){
     if(element = 'menu'){
         let list = document.getElementById("list");
 
         if(showingMenu){
             list.style.display = 'none'
+            document.getElementById('menuIcon').style.backgroundColor = 'lightgray';
             showingMenu = false;
         }else{
             list.style.display = 'block'
+            document.getElementById('menuIcon').style.backgroundColor = 'orange';
             showingMenu = true;
         }
     }
@@ -79,10 +82,10 @@ function hideSuggested(){
 }
 
 function fillLocation(field, value){
-    console.log('here')
     let input = document.getElementById(field);
     input.value = value;
     console.log(input.id, input.value)
+    hideSuggested();
     return true
 }
 
@@ -134,15 +137,33 @@ function doTime(){
     return true
 }
 const car0 = {
-    img: 'car1.png',
+    img: './imgs/car1.png',
     price :'$100',
     model: 'Model 1',
     year: '2019',
     tag : ['5 Seats','4 Wheels','Automatic']
 }
 
+function confirm(){
+    event.preventDefault()
+    window.location.href = 'tos.html'
+    return true
+}
+
+function tos(){
+    event.preventDefault()
+    window.location.href = 'last.html'
+    return true
+}
+
+function main(){
+    event.preventDefault()
+    window.location.href = 'main.html'
+    return true
+}
+
 const car1 = {
-    img: 'car2.png',
+    img: './imgs/car2.png',
     price: '$300',
     model: 'Model 2',
     year: '2021',
@@ -189,6 +210,8 @@ function prevCar(){
 function viewCar(){
     window.location.href = 'viewCar.html'
 }
+
+
 let selected = ['',false]
 function selectCar(selElement){
     //console.log(selected)
@@ -271,11 +294,6 @@ window.onload = function(){
             loadCar(1)
         }
 
-        if(currPage == 'viewCar'){
-            
-        }
-
-
     }else if(currPage == 'startPage'){
         document.getElementById("signIn").onclick = function(){
             window.location.href = 'login.html';
@@ -288,5 +306,7 @@ window.onload = function(){
         document.getElementById('loginBtn').onclick = function(){
             window.open('test.html', '_self');
         }
+    }else if(currPage == 'main'){
+        menu('menu');
     }
 }

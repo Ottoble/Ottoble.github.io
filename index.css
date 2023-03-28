@@ -66,7 +66,7 @@ body{
     width: 7rem;
     margin: 1.5rem 1rem 0rem 1rem;
     border-radius: 0.5rem;
-    border: 1px solid orange;
+    border: 1px solid gray;
 }
 
 #backBtn p{
@@ -106,7 +106,6 @@ body{
 }
 
 #navBtn button{
-    margin:0rem;
     padding: 0.5rem;
 }
 
@@ -311,7 +310,7 @@ body{
 }
 
 .search input{
-    background:url(map-marker-icon.png) no-repeat;
+    background:url(./imgs/map-marker-icon.png) no-repeat;
     background-size: 2rem;
     background-position: right;
     background-color: white;
@@ -336,12 +335,76 @@ body{
     background-color: orange;
 }
 
-#pickUpLoc {
+#pickUpLoc , #dropOfLoc, #puc, #locBar{
     width: 100%;
     padding: 0.5rem;
     border-radius: 0.5rem;
     font-size: 1.5rem;
 }
+#puT:valid #fwdBtn{
+    background-color: orange;
+}
+
+#doT #fwdBtn:valid{
+    background-color: orange;
+}
+.cont {
+    display:block;
+    margin:auto;
+    width:80%;
+}
+
+.cont p{
+    display:block;
+    border: 1px black solid;
+    border-radius: 0.5rem;
+    width:90%;
+    font-size: 2rem;
+    margin:auto;
+    background: url('./imgs/clock.png') no-repeat 100px right;
+    background-color: lightgray;
+
+}
+
+.cont label{
+    display:block;
+    padding:0.5rem;
+    font-size: 2rem;
+    margin: 1rem auto 0 auto;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    width: 87%;
+}
+
+
+.cont #time{
+    display:flex;
+    justify-content: left;
+}
+
+.cont #time input{
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    width: 15%;
+    font-size: 2rem;
+}
+.cont input{
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    width: 95%;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+
+}
+.cont select{
+    padding:0.5rem;
+    border-radius: 0.5rem;
+    width: 15%;
+    font-size: 2rem;
+    background-color: white;
+}
+
 #dropOffLoc {
     width: 100%;
     padding: 0.5rem;
@@ -349,6 +412,32 @@ body{
     font-size: 1.5rem;
 }
 
+#dOfL #fwdBtn:valid{
+    background-color: orange;
+}
+
+.searchCar {
+    margin: 0.5rem auto 0rem auto;
+    width: 70%;
+}
+
+.searchCar button{
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: -0.5rem;
+}
+
+.searchCar button:hover{
+    background-color: orange;
+}
+
+#selCarBar{
+    width:80%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    margin: 0rem;
+}
 #marker {
     width: 1.5rem;
     padding: 0.5rem;
@@ -381,7 +470,7 @@ body{
 #carDisplay{
     display:inline-flex;
     width: 80%;
-    margin: 2rem 0rem 2rem 3rem;
+    margin: 1.5rem 0rem 1rem 3rem;
 }
 
 #carModelYear {
@@ -468,7 +557,7 @@ td{
 #carDisplayView{
     display:inline-block;
     width: 80%;
-    margin: 2rem 0rem 2rem 3rem;
+    margin: 2rem auto 2rem 4.5rem;
 }
 
 #carModelYearView {
@@ -527,7 +616,174 @@ td{
     font-size:1rem;
 }
 
+.con p{
+    display:inline-block;
+    margin:0.5rem 0rem 0.5rem 0rem ;
+    width: 21%;
+}
 
+.con p:hover{
+    background-color: white;
+}
+
+.con #am{
+    width:15%;
+}
+
+#t{
+    margin: 1rem;
+}
+
+#t img{
+    margin-right: 3rem;
+}
+
+#c {
+    background-color: lightgray;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+#c p{
+    font-size: 1rem;
+}
+
+#t p{
+    background-color: orange;
+    margin:0.5rem;
+}
+
+.boxTos {
+    width: 73%;
+    margin: 0.5rem auto 1rem auto;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.boxTos p{
+    width: 80%;
+    text-align: left;
+    padding: 0.5rem;
+    margin: 0.5rem auto 0rem auto;
+}
+
+#pay{
+    display: flex;
+    box-shadow: 0 5px #999;
+}
+#pay:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#pay:hover{
+    background-color: orange;
+}
+
+#card {
+    width: 10%;
+    margin: 0.5rem 0.8rem 0rem 0rem;
+}
+hr{
+    margin:auto;
+    width: 80%;
+}
+#total{
+    margin-bottom: 0.5rem;
+}
+
+#check{
+    display:block;
+}
+#check label{
+    padding: 0.5rem;
+    margin: 0 0 0 0.5rem;
+    font-size: 1.2rem;
+    display: block;
+}
+
+#check a{
+    display: block;
+    margin:-0.5rem 0rem 0rem 0.5rem;
+    font-size:1rem;
+}
+
+#mainMenu{
+    margin:auto;
+    width: 40%;
+}
+
+#last p{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#last form{
+    margin: 1rem auto 2rem auto;
+    width: 70%;
+    display: block;
+    background-color: lightgray;
+    border: 1px black solid;
+    border-radius: 1rem;
+    padding:1rem 1rem 2rem 1rem;
+}
+
+#last label{
+    width:60%;
+    margin: 1rem 0 1rem 9rem;
+}
+
+#myAcc {
+    margin: 1rem auto 2rem auto;
+    width: 70%;
+    display: block;
+    background-color: lightgray;
+    border: 1px black solid;
+    border-radius: 1rem;
+    padding:1rem 1rem 2rem 1rem;
+}
+
+#callBox {
+    margin: 1rem auto 2rem auto;
+    width: 70%;
+    display: block;
+    background-color: lightgray;
+    border: 1px black solid;
+    border-radius: 1rem;
+    padding:1rem 1rem 2rem 1rem;
+}
+
+#txt{
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px black solid;
+}
+
+.label{
+    font-size:2rem;
+    padding:0.5rem;
+    margin: 0.5rem 0 0 0;
+}
+.val{
+    font-size:1.5rem;
+    padding:0.5rem;
+    background-color: white;
+    border:1px black solid;
+    border-radius: 1rem;
+}
+
+#pfp {
+    width: 20%;
+    padding:1rem;
+    margin-left: 5px;
+    background-color: white;
+    border-radius: 5rem;
+    border: 1px black solid;
+}
 
 
 /*button css*/

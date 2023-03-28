@@ -3,7 +3,7 @@
 <link rel="stylesheet" href = "index.css">
     <head>        
     </head>
-        <body id = "main"> 
+        <body id = "acc"> 
             <div id="dropdown">
                 <img src = "./imgs/menu.png" id = "menuIcon" onclick = "menu('menu')">
                 <div id="list">
@@ -12,7 +12,21 @@
                     <a href="acc.html">Account Setting</a>
                     <a href="call.html">24/7 support line</a>
                 </div>
-              </div>      
+                </div> 
+                <div class = "acc">
+                <p class = "title">Account</p>
+                <div id = "myAcc">
+                    <div style = 'display:flex; justify-content: center;'>
+                        <img src = "imgs/icon.png" id = 'pfp'>
+                    </div>
+                    
+                    <p class = 'label'>Name:</p>
+                    <p class = 'val' >John Smith</p>
+                    <p class = 'label'>Email:</p>
+                    <p class = 'val'>example@email.com</p>
+
+                </div>
+                
             </div>
             <script src = "script.js"></script>
         </body>

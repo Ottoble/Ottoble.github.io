@@ -5,13 +5,12 @@
     </head>
         <body id = "viewCar"> 
             <div id="dropdown">
-                <img src = "menu.png" id = "menuIcon" onclick = "menu('menu')">
+                <img src = "./imgs/menu.png" id = "menuIcon" onclick = "menu('menu')">
                 <div id="list">
-                    <a href="#">Rent a car</a>
-                    <a href="#">View locations</a>
-                    <a href="#">View previous rides</a>
-                    <a href="#">Account Setting</a>
-                    <a href="#">24/7 support line</a>
+                    <a href="rent.html">Rent a car</a>
+                    <a href="location.html">View locations</a>
+                    <a href="acc.html">Account Setting</a>
+                    <a href="call.html">24/7 support line</a>
                 </div>
                 </div> 
                 <div class = "viewCar">
@@ -25,7 +24,7 @@
                         <div id = 'carSel1' class = 'rectangleView' onclick ='selectCar(carSel1)'>
                             <table style="width:100%"  >
                                 <tr>
-                                  <th rowspan="2" width = "30%"><img src ='car1.png' alt = 'carimg' id = 'carImgView' width="95%" height = '80%'></th>
+                                  <th rowspan="2" width = "30%"><img src ='./imgs/car1.png' alt = 'carimg' id = 'carImgView' width="95%" height = '80%'></th>
                                   <td style = 'padding: 0.5rem;'>$100</td>
                                   <td colspan="2"><div id = 'modelYear' style = 'display: flex;'> <p style = 'margin: 0 8rem 0 0.5rem;'>Model 1</p> <p>2019</p></div></td>
                                 </tr>
@@ -41,7 +40,7 @@
                             <div id = 'carSel2' class = 'rectangleView' onclick ='selectCar(carSel2)'>
                                 <table style="width:100%" >
                                     <tr>
-                                      <th rowspan="2" width = "30%"><img src ='car2.png' alt = 'carimg' id = 'carImgView' width="95%" height = '80%'></th>
+                                      <th rowspan="2" width = "30%"><img src ='./imgs/car2.png' alt = 'carimg' id = 'carImgView' width="95%" height = '80%'></th>
                                       <td style = 'padding: 0.5rem;'>$300</td>
                                       <td colspan="2"><div id = 'modelYear' style = 'display: flex;'> <p style = 'margin: 0 8rem 0 0.5rem;'>Model 2</p> <p>2021</p></div></td>
                                     </tr>
@@ -62,12 +61,12 @@
 
                     <div id = "navBtn">
                         <button type = "button" id = "backBtn"> 
-                            <img src = "back.png" alt = "back arrow" id = "backArrow">
+                            <img src = "./imgs/back.png" alt = "back arrow" id = "backArrow">
                             <p>Back</p>
                         </button>
                         <button type = "submit" id = "fwdBtn" disabled href = 'dropOff.html'> 
                             <p>Next</p>
-                            <img src = "back.png" alt = "back arrow" id = "fwdArrow">
+                            <img src = "./imgs/back.png" alt = "back arrow" id = "fwdArrow">
                         </button>
                         </div>
                     </div>
