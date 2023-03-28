@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<title>Incognito</title>
+<link rel="stylesheet" href = "index.css">
+    <head>        
+    </head>
+        <body id = "selCar"> 
+            <div id="dropdown">
+                <img src = "menu.png" id = "menuIcon" onclick = "menu('menu')">
+                <div id="list">
+                    <a href="#">Rent a car</a>
+                    <a href="#">View locations</a>
+                    <a href="#">View previous rides</a>
+                    <a href="#">Account Setting</a>
+                    <a href="#">24/7 support line</a>
+                </div>
+                </div> 
+                <div class = "selCar">
+                <p class = "title">Select Vehicle</p>
+                <form id = "car" onsubmit = 'return carSel()'>
+                    <div class = searchCar>
+                        <input type = "text" id = "selCarBar" placeholder="Seach for Vehicle" >
+                        <button type = 'button' onclick = 'viewCar()'>View All</button>
+                    </div>
+                    <div id = 'carDisplay'>
+                        <div id = 'leftArrow' class = 'arrow'> &#9664;</div>
+                        <div id = 'rectangle' onclick = 'selectCarTag(rectangle, tag1, tag2, tag3)'>
+                            <div id = 'carImgDiv'>
+                                <img src ='' alt = 'carimg' id = 'carImg' width="70%" height = '80%'>
+                            </div>
+                            <div id = 'carModelYear'>
+                                <p id = 'model'>Model/Make</p>
+                                <p id = 'year'>Year</p>
+                            </div>
+                            <p id = 'price'>Base Price</p>
+                            <div id = 'tags'>
+                                <p id = 'tag1'>tag 1</p>
+                                <p id = 'tag2'>tag 2</p>
+                                <p id = 'tag3'>tag 3</p>
+                            </div>
+                        </div>
+                        <div class = 'arrow' id = 'rightArrow' onclick = 'nextCar()'>&#9654;</div>
+                    </div>
+
+                    <div id = "navBtn">
+                        <button type = "button" id = "backBtn"> 
+                            <img src = "back.png" alt = "back arrow" id = "backArrow">
+                            <p>Back</p>
+                        </button>
+                        <button type = "submit" id = "fwdBtn" disabled> 
+                            <p>Next</p>
+                            <img src = "back.png" alt = "back arrow" id = "fwdArrow">
+                        </button>
+                        </div>
+                    </div>
+                </form>
+                
+                
+                
+            </div>
+            <script src = "script.js"></script>
+        </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<title>Incognito</title>
+<link rel="stylesheet" href = "index.css">
+    <head>        
+    </head>
+        <body id = "return"> 
+            <div id="dropdown">
+                <img src = "menu.png" id = "menuIcon" onclick = "menu('menu')">
+                <div id="list">
+                    <a href="#">Rent a car</a>
+                    <a href="#">View locations</a>
+                    <a href="#">View previous rides</a>
+                    <a href="#">Account Setting</a>
+                    <a href="#">24/7 support line</a>
+                </div>
+                </div> 
+                <div class = "return">
+                <p class = "title">Drop-off</p>
+                <form id = "dOfL" onsubmit = 'return doloc()'>
+                    <div class = search>
+                        <input class = "search" type = "text" id = "dropOfLoc" placeholder="Seach Drop-Off Location" onclick = 'showSuggested()' onfocusout = 'hideSuggested()' required>
+                        <div id = 'suggested'>
+                            <p onclick = 'return fillLocation("pickUpLoc","Location 1")'>Location 1</p>
+                            <p onclick = 'return fillLocation("pickUpLoc","Location 2")'>Location 2</p>
+                            <p onclick = 'return fillLocation("pickUpLoc","Location 3")'>Location 3</p>
+                        </div>
+                        
+                        <img src="map.jpg" alt="map" usemap="#location" id = "map">
+                    </div>
+                    <map name="location">
+                        <area shape = "circle" coords = "210,100, 40" onclick = 'selectPoint("dropOfLoc", 1)'>
+                        <area shape = "circle" coords = "160,280, 40" onclick = 'selectPoint("dropOfLoc", 2)'>
+                        <area shape = "circle" coords = "370,300, 40" onclick = 'selectPoint("dropOfLoc", 3)'>
+                    </map>
+                    <div id = "navBtn">
+                        <button type = "button" id = "backBtn"> 
+                            <img src = "back.png" alt = "back arrow" id = "backArrow">
+                            <p>Back</p>
+                        </button>
+                        <button type = "submit" id = "fwdBtn" > 
+                            <p>Next</p>
+                            <img src = "back.png" alt = "back arrow" id = "fwdArrow">
+                        </button>
+                        </div>
+                    </div>
+                </form>
+                
+                
+                
+            </div>
+            <script src = "script.js"></script>
+        </body>
+</html>

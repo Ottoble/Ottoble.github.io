@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<title>Incognito</title>
+<link rel="stylesheet" href = "index.css">
+    <head>        
+    </head>
+        <body id = "rentTime"> 
+            <div id="dropdown">
+                <img src = "menu.png" id = "menuIcon" onclick = "menu('menu')">
+                <div id="list">
+                    <a href="#">Rent a car</a>
+                    <a href="#">View locations</a>
+                    <a href="#">View previous rides</a>
+                    <a href="#">Account Setting</a>
+                    <a href="#">24/7 support line</a>
+                </div>
+                </div> 
+                <div class = "rent">
+                <p class = "title">Pick-up</p>
+                <form id = "puT" onsubmit = 'return puTime()'>
+                    <p>Select Pick-up Time</p>
+                    <label>
+                        Pick-Up Date
+                        <input type = "date" id = "puDate" required>
+                    </label>
+                    <label>
+                        Pick-up Time
+                        <input  type = 'number' id = 'puHour' min = "1" max = "12" required>
+                    </label>
+                    <label>
+                        <input  type = 'number' id = 'puMin' min = "0" max = "59" required>
+                    </label>
+                    <label>
+                        <select id = "amPm" required>
+                            <option value = "Am">Am</option>
+                            <option value = "Pm">Pm</option>
+                        </select>
+                    </label>
+                    <div id = "navBtn">
+                        <button type = "button" id = "backBtn"> 
+                            <img src = "back.png" alt = "back arrow" id = "backArrow">
+                            <p>Back</p>
+                        </button>
+                        <button type = "submit" id = "fwdBtn" > 
+                            <p>Next</p>
+                            <img src = "back.png" alt = "back arrow" id = "fwdArrow">
+                        </button>
+                        </div>
+                    </div>
+                </form>  
+            </div>
+            <script src = "script.js"></script>
+        </body>
+</html>

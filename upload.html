@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<title>Incognito</title>
+<link rel="stylesheet" href = "index.css">
+    <head>        
+    </head>
+        <body id = "uploadPage"> 
+            <div class = "logo1">
+                <img src = "icon.png" alt = "logo" id = "logo">
+            </div>
+
+            <div class ="uploadPage">
+
+                <form id="uploadForm">
+                    <p>Upload a clear photo of your driver's license</p>
+                    <div id = 'driverImg'>
+                        <img src = "driver.png">
+                    </div>
+                   <label>
+                    <input id = 'license' type = 'file' accept = 'image/*'>
+                   </label>
+
+                    <button type = "submit" id="loginBtn" onclick = 'return uploadImg()'>
+                        Upload
+                    </button>
+
+                    <button type = "button" id = "backBtn"> 
+                        <img src = "back.png" alt = "back arrow" id = "backArrow">
+                        <p>Back</p>
+                    </button>
+                </form>
+
+            </div>
+            <script src = "script.js"></script>
+        </body>
+</html>
