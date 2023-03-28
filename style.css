@@ -79,6 +79,10 @@ body{
     width: 60%;
 }
 
+#AboutMe h2{
+    padding-bottom: 10px;
+}
+
 #AboutMe p{
     font-size: 18px;
     margin-top: 10px;
@@ -113,6 +117,7 @@ body{
     margin-right:auto;
     margin-top: 50px;
     margin-bottom:30px;
+    text-align: left;
 
 }
 
@@ -129,6 +134,9 @@ body{
     padding-bottom: auto;
     margin-left:20px;
     margin-right:10px;
+    text-align: center;
+    border-radius: 5px;
+
 }
 
 #boxGameDiv{
@@ -142,7 +150,6 @@ body{
     text-decoration: none;
     font-size: 20px;
     border: 1px rgb(79, 40, 218) solid;
-    border-radius: 5px;
 }
 
 #boxGameDiv a:hover{
@@ -150,7 +157,7 @@ body{
     background-color: rgb(79, 40, 218);
 }
 
-#site{
+#siteBtn {
     color: white;
     text-align: center;
     padding: 14px 14px;
@@ -160,7 +167,7 @@ body{
     border-radius: 5px;
 }
 
-#site :hover{
+#site a:hover{
     color: black;
     background-color: rgb(79, 40, 218);
 }
